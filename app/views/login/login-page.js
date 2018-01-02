@@ -8,8 +8,9 @@ logic, and to set up your page’s data binding.
 NativeScript adheres to the CommonJS specification for dealing with
 JavaScript modules. The CommonJS require() function is how you import
 JavaScript modules defined in other files.
-*/ 
-var createViewModel = require("./main-view-model").createViewModel;
+*/
+var topmost = require("ui/frame").topmost;
+var createViewModel = require("./login-view-model").createViewModel;
 
 function onNavigatingTo(args) {
     /*
@@ -32,6 +33,15 @@ function onNavigatingTo(args) {
     page.bindingContext = createViewModel();
 }
 
+
+function onPageLoaded(args) {
+    var accountKit = com.facebook.accountkit.AccountKit;
+    var accessToken = accountKit.getCurrentAccessToken();
+
+    if (accessToken != null) {
+        topmost().navigate("views/main/main-page");
+    }
+}
 /*
 Exporting a function in a NativeScript code-behind file makes it accessible
 to the file’s corresponding XML file. In this case, exporting the onNavigatingTo
@@ -39,3 +49,4 @@ function here makes the navigatingTo="onNavigatingTo" binding in this page’s X
 file work.
 */
 exports.onNavigatingTo = onNavigatingTo;
+exports.onPageLoaded = onPageLoaded;

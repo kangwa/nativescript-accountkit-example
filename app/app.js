@@ -9,7 +9,7 @@ var application = require("application");
 var appSettings = require("application-settings");
 
 appSettings.setNumber("APP_REQUEST_CODE", 99);
-application.start({ moduleName: "main-page" });
+application.start({ moduleName: "views/login/login-page" });
 
 /*
 Do not place any code after the application has been started as it will not
