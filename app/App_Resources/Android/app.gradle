@@ -1,14 +1,16 @@
 // Add your native dependencies here:
 
 // Uncomment to add recyclerview-v7 dependency
-//dependencies {
+dependencies {
 //	compile 'com.android.support:recyclerview-v7:+'
-//}
+    compile 'com.facebook.android:account-kit-sdk:4.23.0'
+}
 
 android {  
   defaultConfig {  
     generatedDensities = []
     applicationId = "org.nativescript.NativescriptAccountkitExample" 
+    
     
     //override supported platforms
     // ndk {
