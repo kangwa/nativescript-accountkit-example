@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Nativescript AccountKit</string>
+  <string name="title_activity_kimera">NativeScript AccountKit</string>
+  <string name="FACEBOOK_APP_ID">199337247298179</string>
+  <string name="ACCOUNT_KIT_CLIENT_TOKEN">038d4d269dfc06f0388069dd53d4dc95</string>
+</resources>
