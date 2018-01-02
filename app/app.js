@@ -6,7 +6,9 @@ purpose of the file is to pass control to the app’s first module.
 
 require("./bundle-config");
 var application = require("application");
+var appSettings = require("application-settings");
 
+appSettings.setNumber("APP_REQUEST_CODE", 99);
 application.start({ moduleName: "main-page" });
 
 /*
