@@ -1,5 +1,7 @@
 # Nativescript AccountKit Example
 
+### Tutorial
+The tutorial for this repo can be found on [Medium](https://medium.com/@kangwa/how-to-use-accountkit-with-nativescript-7fe9f78c932f)
 
 ### Prerequisites
 
