@@ -27,12 +27,13 @@ activity.onActivityResult = function (requestCode, resultCode, data) {
 }
 
 function accountKitLogin(loginType) {
+    var accountKitActivity = com.facebook.accountkit.ui.AccountKitActivity;
     var accountKitConfig = com.facebook.accountkit.ui.AccountKitConfiguration;
     var intent = new android.content.Intent(activity, accountKitActivity.class);
     var configBuilder = new accountKitConfig.AccountKitConfigurationBuilder(loginType, accountKitActivity.ResponseType.CODE);
 
     intent.putExtra(
-        com.facebook.accountkit.ui.AccountKitActivity.ACCOUNT_KIT_ACTIVITY_CONFIGURATION,
+        accountKitActivity.ACCOUNT_KIT_ACTIVITY_CONFIGURATION,
         configBuilder.build()
     )
 
